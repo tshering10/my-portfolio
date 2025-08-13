@@ -1,6 +1,10 @@
+import { RevealOnScroll } from "./RevealOnScroll";
 export const About = () => {
     return (
-        <section id="about" className="min-h-screen flex items-center justify-center py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+        <section id="about"
+         className="min-h-screen flex items-center justify-center py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+            
+            <RevealOnScroll>
             <div className="max-w-6xl mx-auto w-full">
                 {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
@@ -45,7 +49,7 @@ export const About = () => {
                                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                                     {['Python', 'Django', 'Rest Framework', 'API Development', 'MySQL', 'PostgreSQL'].map((skill, index) => (
                                         <div key={index} className="backdrop-blur-sm px-3 py-2 rounded-lg border border-blue-400/30 text-center transition-all duration-300 hover:scale-105">
-                                            <span className="text-green-200 font-medium text-sm sm:text-base">{skill}</span>
+                                            <span className="text-blue-200 font-medium text-sm sm:text-base">{skill}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -56,7 +60,7 @@ export const About = () => {
                     {/* Right Side - Visual Elements */}
                     <div className="flex justify-center lg:justify-end mt-8 lg:mt-0">
                         <div className="relative w-full max-w-md">
-                            {/* Main Stats Card */}
+                            
                             <div className="bg-white/10 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border border-white/20 hover:border-white/30 transition-all duration-300 hover:-translate-y-1">
                                 <div className="space-y-6">
 
@@ -117,6 +121,7 @@ export const About = () => {
                     </div>
                 </div>
             </div>
+          </RevealOnScroll>
         </section>
     );
 };

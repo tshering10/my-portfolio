@@ -1,9 +1,12 @@
 import { TypeAnimation } from 'react-type-animation';
-
+import { RevealOnScroll } from './RevealOnScroll';
 export const Home = () => {
     return (
-        <section id="home" className="min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+        <section id="home" 
+        className="min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8 py-8 sm:py-16">
+            
             <div className="max-w-6xl mx-auto w-full">
+                <RevealOnScroll>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
                     {/* Text Content - Left Side */}
                     <div className="order-2 lg:order-1 text-center lg:text-left space-y-4 sm:space-y-6">
@@ -65,7 +68,9 @@ export const Home = () => {
                         </div>
                     </div>
                 </div>
+                </RevealOnScroll>
             </div>
-        </section>
+        
+     </section>
     );
 };
