@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaFacebook } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsArrowUp } from 'react-icons/bs';
+import { RevealOnScroll } from "./RevealOnScroll";
 
 export const Footer = () => {
     const scrollToTop = () => {
@@ -12,7 +13,9 @@ export const Footer = () => {
 
     return (
         <footer className="bg-black/50 border-t border-white/10 py-8 sm:py-12">
+            <RevealOnScroll>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
                 {/* Main Footer Content */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     {/* Brand Section */}
@@ -120,6 +123,7 @@ export const Footer = () => {
                     </div>
                 </div>
             </div>
+            </RevealOnScroll>
         </footer>
     );
 };
